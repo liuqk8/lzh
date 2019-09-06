@@ -4,9 +4,9 @@
 {% block title %}
     {% trans 'detail page' %}-{{ article.title }}
 {% endblock %}
-{% block extra_js %}
-    <script src="{% static 'js/vue.js' %}"></script>
-{% endblock %}
+{#{% block extra_js %}#}
+{#    <script src="{% static 'js/vue.js' %}"></script>#}
+{#{% endblock %}#}
 <script>
     function setFont(str) {
         var tog = document.getElementById("artContent");
@@ -47,7 +47,7 @@
 
         <div id="artContent">
             {% if article.videolink %}
-                <p style="text-align: center">
+                <p>
                     {% ifequal article.videolink|slice:":4" 'http' %}
                         <video controls="controls" autoplay="autoplay" poster="{{ article.facadePicUrl }}">
                             {% ifequal  article.videolink|slice:'-4:' '.ogg' %}

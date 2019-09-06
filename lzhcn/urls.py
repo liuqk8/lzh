@@ -14,6 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # from django.contrib import admin
+from django.conf.urls import url
+from django.views.static import serve
+from . import settings
 from django.urls import path, include
 from django.views.generic import TemplateView
 import xadmin
@@ -25,4 +28,5 @@ urlpatterns = [
     # path("", TemplateView.as_view(template_name="peixun/index.html"), name="index"),
     path('ueditor/', include('DjangoUeditor.urls')),
     path("login/", UserLoginView.as_view(), name='login'),
+    url(r'^uploads/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
 ]
