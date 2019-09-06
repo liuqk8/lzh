@@ -1,0 +1,53 @@
+
+.longLay{width: 100%;float: left;text-align: left;height: auto;}
+.navPosition{height: 2em;line-height: 2em;width: 100%;float: left;border-bottom: 2px solid #c00000;}
+.second_right{width:28%;max-width: 280px;float: left;height: auto;margin-left: 1.8%;overflow:hidden;}
+.second_right ul{margin-bottom:1em;}
+.second_right li{width:100%;float:left;background: none;text-indent: 0;white-space: normal}
+
+.modelBox{width: 100%;float: left;height: 22em;overflow: hidden;margin-bottom: 1em;border: 1px solid #ffefef}
+.modelBox_title{width: 100%;float: left;height: 2em;line-height: 2em;background-color: #c00000;text-indent: 1em}
+.modelBox_title a{color: #ffffff}
+.modelBox_content{width: 100%;float: left;height: 20em;line-height: 2em;}
+.modelBox_content li{width: 100%;float: left;text-indent: 1em;overflow: hidden;text-overflow: ellipsis;}
+.second_middle{width:70%;max-width: 700px;height:auto;min-height:45em;float: left;border: 1px solid #ffefef}
+.second_middle ul{width: 100%;float: left;}
+.second_middle ul li{width: 100%;float: left;text-indent: 1em;line-height: 2em;overflow:hidden;text-overflow: ellipsis;background: none}
+
+.paginateButtons{width: 100%;float: left;text-align: center;margin-top: 10px;}
+.second_middle_title{width: 100%; height: 3em;line-height: 3em;text-indent: 1em;text-align: left;color: #c00000;font-size:1.5em;border-radius: 0.3em;}
+.paginateButtons a{text-decoration: none;width: auto;float: left;}
+.currentStep,.step,.prevLink,.nextLink{padding: 1px 4px;border: 1px solid #c00000;margin-left: 5px;float: left}
+.currentStep{background-color: #c00000;float: left}
+#search_page h3{width: 100%;float: left;text-align: center;margin-top: 2em;}
+.dateAlign{margin-right: 10px;}
+article{width: 80%;margin: auto 10%;white-space: normal;text-align: left;}
+.pic-scale img{transition-duration:0.5s;}
+.pic-scale img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2); /*Safari 和 Chrome*/
+    -moz-transform: scale(1.2); /*Firefox*/
+    -ms-transform: scale(1.2); /*IE9*/
+    -o-transform: scale(1.2); /*Opera*/
+}
+
+.grid-item{
+    width: 28%;
+    margin: 1em auto;
+    /*float: left;*/
+    overflow: hidden;
+    -moz-box-shadow: 0 0 1em #255b17;
+    -webkit-box-shadow: 0 0 1em #255b17;
+    box-shadow: 0 0 1em #255b17;
+    border-radius: 0.5em;
+    /*border: 1px dashed #c00000;*/
+}
+
+
+.grid-item img, .grid-item p {
+    width: 98%;
+    margin:auto 1%;
+    height: auto;
+    text-align: center;
+    float: left;
+}

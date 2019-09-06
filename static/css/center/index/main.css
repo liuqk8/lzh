@@ -1,0 +1,82 @@
+
+#container{background: url("/uploads/center/jieri/bg.png") top center no-repeat}
+.longLay{width:98%;height: auto;overflow: hidden;float: left;margin: 1%;border: 1px solid #fff6f6}
+.longLay li{background: none;text-indent: 0}
+.leftDiv,.midDiv{width:30%;height: 24em;margin:1% 4.7% 1% 0;float:left;border: 1px solid #fff6f6;overflow: hidden}
+/*#focusDiv{width: 64.7%;height: 24em;float: left;margin:1% 4.7% 1% 0}*/
+.temp_slide {width: 64.7%;height: 24em;float: left;margin:1% 4.7% 1% 0}
+.top-slide{width:100%;height: auto;overflow: hidden;max-width: 1000px;margin: 0 auto;}
+.rightDiv{width:30%;height: 24em;margin: 1% auto;float:left;overflow: hidden;border: 1px solid #fff6f6;}
+.divHead{width: 100%;height: 4em;float: left;border-bottom: 2px solid #c00000}
+/*background: url("../../../images/front/h_bg.jpg") repeat-x}*/
+.divTitle{float: left;text-indent: 1em;line-height:3em;font-size: 1.5em;font-weight: 400;color: #693636}
+.divTitle a{color: #693636}
+.divMore{width: 25%;height: 4em;float: right;line-height:4em;font-size: 0.8em;text-align: right;margin-right: 1em}
+
+.leftDiv ul,.midDiv ul,.rightDiv ul{width: 100%;float: left;overflow: hidden}
+.leftDiv ul li,.midDiv ul li,.rightDiv ul li{width: 100%;float: left;overflow: hidden;text-overflow:ellipsis;text-indent: 1em;height: 2em;line-height: 2em;}
+.photo_img{height: 10em;float: left;overflow: hidden}
+#yjhjg,#yjhls{height: 12em;overflow: hidden;float: left;margin: 5px auto;border: 1px solid #ffdede}
+
+#zjgw,#lzxf{float: left;overflow: hidden}
+/*#lzxf{margin-left: 0.6%}*/
+#yjhjg ul,#zjgw ul,#lzxf ul,#yjhls ul{width:auto;height: 12em;float: left;overflow: hidden;background: darkgray}
+#yjhjg ul li,#zjgw ul li,#lzxf ul li,#yjhls ul li{width:10em;height:  12em;white-space: nowrap;display: inline;text-indent: 0;margin: auto 5px;}
+#yjhjg ul li img,#zjgw ul li img,#lzxf ul li img,#yjhls ul li img{width:10em;height:  12em;overflow: hidden;}
+.halfDivl,.halfDivr{width: 48%;height:16em;overflow: hidden;border: 1px solid #ffdede}
+.halfDivr{margin: 1% 0 1% 3.6%}
+.halfDivl{margin: 1% auto}
+.halfDivl{float: left}
+.halfDivr{float: right}
+#lastestList,#lastestList ul{width: 99.8%;float: left;height: auto;overflow: hidden;}
+#lastestList{border: 1px solid #c00000;border-radius: 5px;margin: 0.4em auto;}
+#lastestList ul li{width: 32%;float: left;margin : 0.5%;background: none}
+#siteNote{height: 22em;width: 100%;float: left;overflow: hidden;}
+#headLine, #mainHead{border: none;width: 100%;height:auto;overflow:hidden;float: left;font-size: 3em;font-weight: bold;}
+#headLine{text-align: center}
+/*#headLine ul{width: 100%;text-align: center;}*/
+/*#headLine ul li{text-indent: 0;background: none;margin: auto 0.5em}*/
+#mainHead a{color: #c00000;}
+#adv1,#adv2,#adv3,#adv4,#adv5,#adv6,#adv7,#adv8{border: none;}
+#adv1{width: 1000px;margin: 0 auto;padding: 0}
+#advLeft,#advRight{width: 150px;height: 350px;position: fixed; z-index: 100}
+
+.imgArea{width: 100%;height:10em;overflow: hidden;float: left;}
+.imgImg,.imgContent{width:100%;float: left;overflow: hidden;height:10em;}
+.hasImage{width: 100%;float: left;}
+.imgContent{margin: 0 0 0 10px;font-size: 0.8em;overflow: hidden;text-overflow: ellipsis;line-height: 2em;height: auto}
+.imgImg p{position:relative;z-index: 100;top:-2em;filter:Alpha(opacity=60);background-color:#c00000;color: #ffffff;text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 0.8em;}
+.imgTitle{position:relative;width:100%;float:left;height:2em;z-index: 100;top:-2.2em;
+    filter:Alpha(opacity=50);background-color:rgba(200,0,0,0.5);color: #ffffff;text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 0.8em;}
+.imgList .imgArea{height: 12em;}
+.imgList .imgTitle{top:-2.8em}
+.imgList li{background: none;text-indent: 0}
+.halfImage .imgImg,.imgContent{width:100%;float: left;overflow: hidden;}
+#xsd{width: 100%;height: 12em;float: left;background-color:rgba(255,240,240,0.8)}
+.hasImage a{width:100%;float: left;overflow: hidden;text-align: center;background-color:#ffeeee; }
+.hasImage img{width:auto;max-width:100%;height:10em; margin: 0}
+#subHead{width: 100%;float: left;overflow: hidden;margin-top: 10px;}
+#subHead li{width: 24%;text-align: center;margin:auto 0.4%;padding: 0;background: none;float: left;text-indent: 0;border-left: 1px solid #c00000;line-height: 1em}
+#subHead li:first-child{border: none}
+#subHead li a{width: 100%}
+#goTop{position: fixed;right: 0;bottom: 0;}
+.pic-scale img{transition-duration:0.5s;}
+.pic-scale img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1); /*Safari 和 Chrome*/
+    -moz-transform: scale(1.1); /*Firefox*/
+    -ms-transform: scale(1.1); /*IE9*/
+    -o-transform: scale(1.1); /*Opera*/
+}
+.pic-news,.pic-news ul{width: 100%;height:auto;float: left;overflow: hidden}
+.pic-news ul li{width: 32.3%;height:16em;float: left;overflow: hidden;margin: 0.5%}
+.pic-news ul li img{width: 100%; height:auto;float: left; }
+#g_bg{
+    position: absolute;
+    top: 0;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#g_bg li,.top-slide li{background: none}

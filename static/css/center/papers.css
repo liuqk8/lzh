@@ -1,0 +1,17 @@
+﻿#title{width: 100%;float: left;text-align: center;margin: 1em auto;color:#c00000;}
+#form{width: 98%;margin: auto 1%;text-align: center;height: auto;overflow: hidden;float: left;}
+#form input,#form select{width: 8em;height: 1.5em;margin: 0.3em auto}
+#form span{width: 100%;float: left;text-align: center;}
+#table{width: 90%;margin:1em 5%;float: left;overflow: hidden;text-align: center}
+/*#table img{max-width: 60%;height: auto;float: left}*/
+.search {
+    line-height: 1.5em;
+    background:#c00000 no-repeat 0.2em center;
+    text-indent: 20px;
+    background-image: url(../../images/admin/skin/database_search.png);
+}
+.certInfo{
+    width: 90%;
+    margin: 1em auto;
+}
+.certInfo p{text-align: left;line-height: 2em}

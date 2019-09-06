@@ -1,0 +1,21 @@
+*{zoom:1}
+
+
+.temp_slide li{background: none;text-indent: 0}
+.focusDiv{ position:relative;top:0;left:0;height: 100%;filter:Alpha(opacity=20);background-color:rgba(120,80,80,0.2); }
+.focusDiv .banner-img {width:100%;height: 100%;overflow: hidden; position:relative; z-index:0; }
+.focusDiv .banner-img  li {width:100%; vertical-align:top;height: 100%; }
+.focusDiv .banner-img  li a{width:100%; vertical-align:top;height: 100%; overflow: hidden }
+.focusDiv .banner-img  li img{width:100%;height:auto;float: left; margin-top:-1.5em;}
+.focusDiv .imgTitle{position:relative;z-index:12;width: 100%;top:28em;filter:Alpha(opacity=60);background-color:rgba(120,0,0,0.6);color: #ffffff;}
+.focusDiv .banner-btn{position:relative; z-index:10;top:-3.2em;width: auto; height:2em; line-height:2em;text-align: center;float: right;background-color:rgba(120,0,0,0.2);}
+/*filter:alpha(opacity=60);opacity:0.6*/
+/*.focusDiv .banner-btn ul{ text-align:center;width: 100%;float: left }*/
+.focusDiv .banner-btn ul li{color:#696969;font-size:1em;padding:0.1em; overflow:hidden;background-color: white;margin:0.4em 0.1em;height: 1em;line-height: 1em;width: 1em;
+    border-radius: 0.3em;
+}
+.focusDiv .banner-btn ul .on{background-color: #a63636;color: #ffffff }
+.focusDiv .prev,.focusDiv .next{ z-index:1; display:block; width:55px; height:55px; position:relative;  background:url("../../../images/center/arrow.png") 0 0 no-repeat; filter:alpha(opacity=20);opacity:0.2  }
+.focusDiv .prev{  background-position:left 0;  margin:-30% 0 0 1em;   }
+.focusDiv .next{  background-position:right 0; float:right; margin:-35% 1em 0 85% ;  }
+.focusDiv .prev:hover,.focusDiv .next:hover{ filter:alpha(opacity=80);opacity:0.8 }

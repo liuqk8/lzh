@@ -1,0 +1,26 @@
+
+.longLay{width: 100%;float: left;text-align: left;height: auto;}
+.navPosition{height: 2em;line-height: 2em;width: 100%;float: left;border-bottom: 2px solid #c00000;}
+.second_left{width:28%;max-width: 280px;float: left;height: auto;overflow:hidden;}
+.second_left ul{margin-bottom:1em;}
+.second_left li{width:100%;float:left;background: none;text-indent: 0;white-space: normal}
+
+.modelBox{width: 100%;float: left;height: 22em;overflow: hidden;margin-bottom: 1em;border: 1px solid #ffefef}
+.modelBox_title{width: 100%;float: left;height: 2em;line-height: 2em;background-color: #c00000;text-indent: 1em}
+.modelBox_title a{color: #ffffff}
+.modelBox_content{width: 100%;float: left;height: 20em;line-height: 2em;}
+.modelBox_content li{width: 100%;float: left;text-indent: 1em;overflow: hidden;text-overflow: ellipsis;}
+.second_middle{width:70%;max-width: 700px;height:auto;min-height:45em;float: left;margin-left: 1.8%;border: 1px solid #ffefef;overflow:hidden;}
+.article{height: 3em;width: 100%;overflow: hidden;}
+.displayTitle,.displayLeader,.hui{width: 90%;height:auto;float: left;text-align: center;line-height:1.2em;margin: auto 5%}
+.displayTitle{font-size:1.5em;font-weight: 600}
+ #content_article,article{width: 98%;float: left;margin:2% 1%; }
+ #content_article img,article img{width:auto;max-width: 98%;float: left;margin:0 auto; height: auto;}
+
+p{line-height: 2em;width:100%;float: left;height: auto;color: #4d4f53;font-size: 1.1em}
+#goTop{position: fixed;right: 0;bottom: 0;}
+#artContent a{color: #1C1c9A}
+.prev, .next{ z-index:1; display:block; width:55px; height:55px; position:relative;  float:left;  background:url("../../../images/arrow.png") 0 0 no-repeat; filter:alpha(opacity=20);opacity:0.2;top:-20em; }
+
+.next{  background-position:right 0; float:right; margin-right:3%  }
+.prev:hover,.focusDiv .next:hover{ filter:alpha(opacity=80);opacity:0.8 }

@@ -1,0 +1,9 @@
+.foot3{width:100%; background: #ffffff;border:1px solid #ededed;margin: 0 auto;float: left}
+.foot3_title{color: #901010;height: 3em;line-height: 3em;font-size: 16px;border-top:5px solid #9e0a0a;background: #f6f6f6;}
+.foot3_title a{margin-left: 30px;color: #d11010}
+.foot3_content{width:100%;margin-top: 10px;overflow: hidden}
+.foot3_content ul li{width: auto;height: 2em;line-height: 2em;float: left;font-size: 14px;margin-left: 20px;}
+footer{background-color: #c00000;color: #ffffff;line-height: 2em;height: auto;overflow: hidden;text-align: center;width: 100%;float: left}
+footer a{color:#ffffff;text-decoration: none}
+footer strong,footer strong a{color: #9696ff}
+footer td,footer th{border: none;}

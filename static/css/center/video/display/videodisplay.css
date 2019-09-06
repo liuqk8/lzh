@@ -1,0 +1,39 @@
+﻿html,body{font-size: 14px;}
+*{margin: 0;padding: 0;}
+a{text-decoration: none;color: #636363;}
+a:hover{text-decoration: underline;}
+img{border: none}
+#container {width: 100%;height: auto;overflow: hidden;float: left;margin-top: 38px;}
+#mainbody{width:100%;max-width:1000px;min-width:480px;height: auto;margin: 0 auto;overflow: hidden;}
+.long_layer{width: 100%;float: left;text-align: left;text-align: left;}
+.pro_position{height: 24px;line-height: 24px;margin: 8px 0;float: left}
+.pro_position a:last-child{font-weight: bold}
+.pro_title{width:80px;height: 24px;line-height: 24px;text-align: center;float: left;font-size: 14px;color: #2a2a2a;font-weight: bold;margin-right: 10px;}
+#video{width: 100%;height: auto;float: left;background-color: #5d0909}
+#imgVideo{width: 640px;height: 480px;float: left;margin-left: 172px;}
+#imgVideo p{font-size: 16px;font-weight: bold;color: #ffff00;margin-top: 5em;text-align: center;}
+.videoList{width: 100%;height: 450px;float: left;margin-top: 20px;}
+
+
+
+
+.imgVideo1{width: 100%;height: 300px;float: left;overflow: hidden;margin-top: 20px;}
+.imgVideo1 li{width: 226px;height: 210px;float: left;list-style: none;margin-left: 20px;border: 1px solid rgba(5, 2, 4, 0.40)}
+.imgVideo1 li:first-child,.imgVideo1 li:nth-child(5){margin-left: 0px;}
+.imgVideo1 li:nth-child(5),.imgVideo1 li:nth-child(6),.imgVideo1 li:nth-child(7),.imgVideo1 li:nth-child(8){margin-top: 20px;}
+.imgVideo1_img{width: 206px;height: 140px;float: left;margin-top: 5px;margin-left: 10px;}
+.imgVideo1_img img{width: 206px;height: 140px;float: left;}
+.imgVideo1_title{width: 206px;height: 30px;float: left;margin-top: 10px;overflow: hidden}
+.imgVideo1_title a{overflow: hidden;white-space:pre-wrap;}
+.imgVideo1_clicknum{width: 100%;height: 16px;line-height: 16px;float: left;font-size:12px;margin-top:5px;}
+.imgVideo1_clicknum img{float: left}
+.imgVideo1_content{display: none;width: 230px;height: 55px;float: left;}
+.imgVideo1_show{width: 206px;height: 65px;float: left;margin-left: 10px;}
+.imgVideo1_click{width: 100px;height: 25px;float: left;display: none;margin-left: 55px;background: #ff7818
+}
+.imgVideo1_click a{font-size: 25px;line-height: 25px;color: #ffffff}
+
+.hideimg{width:206px;height:80px}
+.showimg{width:206px;height:140px}
+.showsh{width:206px;height:125px}
+.hidesh{width:206px;height:70px}
