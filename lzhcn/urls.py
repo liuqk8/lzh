@@ -29,4 +29,5 @@ urlpatterns = [
     path('ueditor/', include('DjangoUeditor.urls')),
     path("login/", UserLoginView.as_view(), name='login'),
     url(r'^uploads/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
+    # url(r'^static/(?P<path>.*)$', serve, {"document_root": settings.STATIC_ROOT}),
 ]

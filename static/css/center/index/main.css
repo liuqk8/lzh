@@ -28,9 +28,9 @@
 .halfDivl{margin: 1% auto}
 .halfDivl{float: left}
 .halfDivr{float: right}
-#lastestList,#lastestList ul{width: 99.8%;float: left;height: auto;overflow: hidden;}
+#lastestList,#lastestList ul{width: 99.8%;float: left;min-height:6em ;overflow: hidden;}
 #lastestList{border: 1px solid #c00000;border-radius: 5px;margin: 0.4em auto;}
-#lastestList ul li{width: 32%;float: left;margin : 0.5%;background: none}
+#lastestList ul li{width: 33%;float: left;margin : 0.5%;background: none}
 #siteNote{height: 22em;width: 100%;float: left;overflow: hidden;}
 #headLine, #mainHead{border: none;width: 100%;height:auto;overflow:hidden;float: left;font-size: 3em;font-weight: bold;}
 #headLine{text-align: center}

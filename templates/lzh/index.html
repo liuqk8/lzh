@@ -8,449 +8,447 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/center/index/fullflash.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/center/index/slideStyle.css' %}">
 {% block content %}
-    <div id="app">
-        <div id="site_note">
-            <div class="gg_title">本站公告</div>
+    <div id="site_note">
+        <div class="gg_title">本站公告</div>
 
-            <div class="gg_content">
+        <div class="gg_content">
 
+        </div>
+    </div>
+
+    <div id="lastestList">
+        <ul>
+            {% for item in lasts %}
+                <li>
+                    <a href="{% url 'center:detail' item.id %}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="adv1" class="longLay ads">
+        <ul>
+            {% for ad in adv1 %}
+                <li>
+                    <a href="{{ ad.linkUrl }}"><img src="{{ ad.photo_url }}"/></a></li>
+            {% endfor %}
+        </ul>
+        {#    <lzh:adv advId="402881b74428f729014429241fc30000" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    <div id="headLine">
+        {#    <lzh:headLine pid="0" action="display" domain="com.basesys.channel.center.CenterHeadLine" controller="center"#}
+        {#                  site="1" num="1" subNum="4"/>#}
+        <div id="mainHead">
+            {#                {% if headLines.first.photo_url %}#}
+            {#                                <img src="{{ headLines.first.photo_url }}"/>#}
+            {##}
+            {#                            {% else %}#}
+            {{ headLines.first.title }}
+            {#                            {% endif %}#}
+        </div>
+        **********************************************
+        <ul>
+            {% for hd in headLines|slice:'1:' %}
+                <li>
+                    <a href="{% url 'center:detail' hd.article.id %}">
+                        {{ hd.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <div class="temp_slide pic-scale">
+        <div class="focusDiv">
+            {#        <lzh:focus action="display" controller="center" domain="com.basesys.channel.center.CenterArticle" siteLevel="3"#}
+            {#                   num="9"/>#}
+        </div>
+    </div>
+
+    <div class="rightDiv">
+        {#    <lzh:normalList action="display" controller="center" offset="0" domain="com.basesys.channel.center.CenterArticle"#}
+        {#                    pid="2" num="12"/>#}
+    </div>
+
+
+    <div id="adv2" class="longLay ads">
+        {#    <lzh:adv advId="e78ad55a4a5744c5014a79c513550003" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    <div class="leftDiv">
+        <div class="divHead">
+            <div class="divTitle">
+                推荐阅读
             </div>
         </div>
 
-        <div id="lastestList">
-            <ul>
-                {% for item in lasts %}
-                    <li>
-                        <a href="{% url 'center:detail' item.id %}">{{ item.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <div id="adv1" class="longLay ads">
-            <ul>
-                {% for ad in adv1 %}
-                    <li>
-                        <a href="{{ ad.linkUrl }}"><img src="{{ ad.photo_url }}"/></a></li>
-                {% endfor %}
-            </ul>
-            {#    <lzh:adv advId="402881b74428f729014429241fc30000" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
-        </div>
-
-        <div id="headLine">
-            {#    <lzh:headLine pid="0" action="display" domain="com.basesys.channel.center.CenterHeadLine" controller="center"#}
-            {#                  site="1" num="1" subNum="4"/>#}
-           <div id="mainHead" >
-{#                {% if headLines.first.photo_url %}#}
-{#                                <img src="{{ headLines.first.photo_url }}"/>#}
-{##}
-{#                            {% else %}#}
-                                {{ headLines.first.title }}
-{#                            {% endif %}#}
-           </div>
-          **********************************************
-            <ul>
-                {% for hd in headLines|slice:'1:' %}
-                    <li>
-                        <a href="{% url 'center:detail' hd.article.id %}">
-                                {{ hd.title }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-
-
-        <div class="temp_slide pic-scale">
-            <div class="focusDiv">
-                {#        <lzh:focus action="display" controller="center" domain="com.basesys.channel.center.CenterArticle" siteLevel="3"#}
-                {#                   num="9"/>#}
+        <div id="siteNote">
+            <div class="siteList">
+                {#            <lzh:siteNotice num="20"/>#}
             </div>
         </div>
-
-        <div class="rightDiv">
-            {#    <lzh:normalList action="display" controller="center" offset="0" domain="com.basesys.channel.center.CenterArticle"#}
-            {#                    pid="2" num="12"/>#}
-        </div>
+    </div>
 
 
-        <div id="adv2" class="longLay ads">
-            {#    <lzh:adv advId="e78ad55a4a5744c5014a79c513550003" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
-        </div>
+    <div class="midDiv">
 
-        <div class="leftDiv">
-            <div class="divHead">
-                <div class="divTitle">
-                    推荐阅读
-                </div>
-            </div>
-
-            <div id="siteNote">
-                <div class="siteList">
-                    {#            <lzh:siteNotice num="20"/>#}
-                </div>
-            </div>
-        </div>
-
-
-        <div class="midDiv">
-
-            <div class="divHead">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="16"><lzh:titleByProgramId pid="16" domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="16" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList pid="16" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
-
         </div>
 
-        <div class="rightDiv">
-            <div class="divHead">
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="16" showContent="false" showTitle="true"/>#}
+        </div>
+        {#    <lzh:normalList pid="16" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
+
+    </div>
+
+    <div class="rightDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="29"><lzh:titleByProgramId pid="29"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
 
-            </div>
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="29" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList pid="29" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
-
         </div>
 
-        <div id="adv3" class="longLay ads">
-            {#    <lzh:adv advId="402881b74428f729014429412ce40009" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="29" showContent="false" showTitle="true"/>#}
         </div>
+        {#    <lzh:normalList pid="29" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
 
-        <div class="longLay">
-            <div class="divHead">
+    </div>
+
+    <div id="adv3" class="longLay ads">
+        {#    <lzh:adv advId="402881b74428f729014429412ce40009" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    <div class="longLay">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="10"><lzh:titleByProgramId pid="10"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div id="yjhjg">
-                <div class="imgList pic-scale">
-                    {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="10" num="50" showTitle="true"#}
-                    {#                               controller="center" action="display"/>#}
-
-                </div>
-            </div>
         </div>
 
-        <div class="leftDiv">
-            <div class="divHead">
+        <div id="yjhjg">
+            <div class="imgList pic-scale">
+                {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="10" num="50" showTitle="true"#}
+                {#                               controller="center" action="display"/>#}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="leftDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="11"><lzh:titleByProgramId pid="11"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-            {#    %{--<div class="hasImage">--}%#}
-            {#    %{--<lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display"  controller="center" num="1" offset="0" pid="11" showContent="false" showTitle="true" titleLen="30"/>--}%#}
-            {#    %{--</div>--}%#}
-            {#    <lzh:normalList pid="11" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="10"/>#}
-
         </div>
+        {#    %{--<div class="hasImage">--}%#}
+        {#    %{--<lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display"  controller="center" num="1" offset="0" pid="11" showContent="false" showTitle="true" titleLen="30"/>--}%#}
+        {#    %{--</div>--}%#}
+        {#    <lzh:normalList pid="11" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="10"/>#}
 
-        <div class="midDiv">
-            <div class="divHead">
+    </div>
+
+    <div class="midDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="13" controller="center">#}
 {#            <lzh:titleByProgramId pid="13"#}
 {#                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-            {#    %{--<div class="hasImage">--}%#}
-            {#    %{--<lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display"  controller="center" num="1" offset="0" pid="13" showContent="false"  showTitle="true" titleLen="30"/>--}%#}
-            {#    %{--</div>--}%#}
-            {#    <lzh:normalList pid="13" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="10"/>#}
-
         </div>
+        {#    %{--<div class="hasImage">--}%#}
+        {#    %{--<lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display"  controller="center" num="1" offset="0" pid="13" showContent="false"  showTitle="true" titleLen="30"/>--}%#}
+        {#    %{--</div>--}%#}
+        {#    <lzh:normalList pid="13" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="10"/>#}
 
-        <div class="rightDiv">
-            <div class="divHead">
+    </div>
+
+    <div class="rightDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="4"><lzh:titleByProgramId pid="4"#}
 {#                                                                                 domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
 
-            </div>
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="4" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList pid="4" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
-
         </div>
 
-        <div id="adv4" class="longLay ads">
-            {#    <lzh:adv advId="402881b74428f72901442941472a000a" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="4" showContent="false" showTitle="true"/>#}
         </div>
+        {#    <lzh:normalList pid="4" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
 
-        <div class="halfDivl">
-            <div class="divHead">
+    </div>
+
+    <div id="adv4" class="longLay ads">
+        {#    <lzh:adv advId="402881b74428f72901442941472a000a" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    <div class="halfDivl">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="34"><lzh:titleByProgramId pid="34"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div id="zjgw">
-                <div class="imgList pic-scale">
-                    {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="34" showTitle="true" num="30"#}
-                    {#                               showContent="false" offset="0"#}
-                    {#                               controller="center" action="display"/>#}
-                </div>
-            </div>
         </div>
 
-        <div class="halfDivr">
-            <div class="divHead">
+        <div id="zjgw">
+            <div class="imgList pic-scale">
+                {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="34" showTitle="true" num="30"#}
+                {#                               showContent="false" offset="0"#}
+                {#                               controller="center" action="display"/>#}
+            </div>
+        </div>
+    </div>
+
+    <div class="halfDivr">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="15"><lzh:titleByProgramId pid="15"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div id="lzxf">
-                <div class="imgList pic-scale">
-                    {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="15" showTitle="true" num="30"#}
-                    {#                               showContent="false" offset="0"#}
-                    {#                               controller="center" action="display"/>#}
-
-                </div>
-            </div>
         </div>
 
+        <div id="lzxf">
+            <div class="imgList pic-scale">
+                {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="15" showTitle="true" num="30"#}
+                {#                               showContent="false" offset="0"#}
+                {#                               controller="center" action="display"/>#}
 
-        <div class="leftDiv">
-            <div class="divHead">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="leftDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="14"><lzh:titleByProgramId pid="14"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-
-            {#    <lzh:normalList action="display" controller="center" offset="0"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" pid="14"#}
-            {#                    num="10"/>#}
-
         </div>
 
 
-        <div class="midDiv">
-            <div class="divHead">
+        {#    <lzh:normalList action="display" controller="center" offset="0"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" pid="14"#}
+        {#                    num="10"/>#}
+
+    </div>
+
+
+    <div class="midDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="8">#}
 {#                <lzh:titleByProgramId pid="8"#}
 {#                                                                                 domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="8" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList action="display" controller="center" offset="0"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" pid="8"#}
-            {#                    num="5"/>#}
-
         </div>
 
-        %{--
-        <div class="rightDiv">
-            <div class="divHead">
+
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="8" showContent="false" showTitle="true"/>#}
+        </div>
+        {#    <lzh:normalList action="display" controller="center" offset="0"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" pid="8"#}
+        {#                    num="5"/>#}
+
+    </div>
+
+    %{--
+    <div class="rightDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="25"><lzh:titleByProgramId pid="25"#}
 {#                                                                                    domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-
-            {#    <lzh:normalList action="display" controller="center" offset="0" len="30"#}
-            {#                              domain="com.basesys.channel.center.CenterArticle" pid="25"#}
-            {#                              num="10"/>#}
-
         </div>
-        --}%
-        <div class="rightDiv">
-            <div class="divHead">
+
+
+        {#    <lzh:normalList action="display" controller="center" offset="0" len="30"#}
+        {#                              domain="com.basesys.channel.center.CenterArticle" pid="25"#}
+        {#                              num="10"/>#}
+
+    </div>
+    --}%
+    <div class="rightDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="30"><lzh:titleByProgramId pid="30"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/>#}
 {#            </g:link>#}
         </span>
-            </div>
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="30" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList action="display" controller="center" offset="0"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" pid="30"#}
-            {#                    num="5"/>#}
         </div>
 
-        <div id="adv5" class="longLay ads">
-            {#    <lzh:adv advId="402881b74428f72901442941bad8000c" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="30" showContent="false" showTitle="true"/>#}
         </div>
-        %{--
-        <div class="longLay">
-            <div class="divHead">
+        {#    <lzh:normalList action="display" controller="center" offset="0"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" pid="30"#}
+        {#                    num="5"/>#}
+    </div>
+
+    <div id="adv5" class="longLay ads">
+        {#    <lzh:adv advId="402881b74428f72901442941bad8000c" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+    %{--
+    <div class="longLay">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="84"><lzh:titleByProgramId pid="84"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/>#}
 {#            </g:link>#}
         </span>
-            </div>
-            <div id="yjhls" class="imgList">
-                {#        <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="84" num="50" showTitle="true" titleLen="30"#}
-                {#                           controller="center" action="display"/>#}
-
-            </div>
         </div>
-        --}%
-        <div class="leftDiv">
-            <div class="divHead">
+        <div id="yjhls" class="imgList">
+            {#        <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="84" num="50" showTitle="true" titleLen="30"#}
+            {#                           controller="center" action="display"/>#}
+
+        </div>
+    </div>
+    --}%
+    <div class="leftDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="86"><lzh:titleByProgramId pid="86"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="86" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList pid="86" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
-
         </div>
 
-        <div class="midDiv">
-            <div class="divHead">
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="86" showContent="false" showTitle="true"/>#}
+        </div>
+        {#    <lzh:normalList pid="86" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
+
+    </div>
+
+    <div class="midDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="18"><lzh:titleByProgramId pid="18"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            {#    <lzh:normalList action="display" controller="center" offset="0"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" pid="18"#}
-            {#                    num="10"/>#}
         </div>
 
-        <div class="rightDiv">
-            <div class="divHead">
+        {#    <lzh:normalList action="display" controller="center" offset="0"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" pid="18"#}
+        {#                    num="10"/>#}
+    </div>
+
+    <div class="rightDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="6"><lzh:titleByProgramId pid="6"#}
 {#                                                                                 domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div class="hasImage pic-scale">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="6" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList pid="6" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
-
         </div>
 
-        <div id="adv6" class="longLay ads">
-            {#    <lzh:adv advId="402881b74428f72901442941d10c000d" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+        <div class="hasImage pic-scale">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="6" showContent="false" showTitle="true"/>#}
         </div>
+        {#    <lzh:normalList pid="6" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
 
-        %{--
+    </div>
 
-        <div class="leftDiv">
-            <div class="divHead">
+    <div id="adv6" class="longLay ads">
+        {#    <lzh:adv advId="402881b74428f72901442941d10c000d" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    %{--
+
+    <div class="leftDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="31"><lzh:titleByProgramId pid="31"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-
-            <div class="hasImage">
-                {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
-                {#                       offset="0" pid="31" showContent="false" showTitle="true"/>#}
-            </div>
-            {#    <lzh:normalList pid="31" offset="0" action="display" controller="center"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
-
         </div>
 
 
-        <div class="midDiv">
-            <div class="divHead">
+        <div class="hasImage">
+            {#        <lzh:imageList domain="com.basesys.channel.center.CenterArticle" action="display" controller="center" num="1"#}
+            {#                       offset="0" pid="31" showContent="false" showTitle="true"/>#}
+        </div>
+        {#    <lzh:normalList pid="31" offset="0" action="display" controller="center"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" num="5"/>#}
+
+    </div>
+
+
+    <div class="midDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="21"><lzh:titleByProgramId pid="21"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-
-            {#    <lzh:normalList action="display" controller="center" offset="0"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" pid="21"#}
-            {#                    num="10"/>#}
-
         </div>
 
-        <div class="rightDiv">
-            <div class="divHead">
+
+        {#    <lzh:normalList action="display" controller="center" offset="0"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" pid="21"#}
+        {#                    num="10"/>#}
+
+    </div>
+
+    <div class="rightDiv">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="5"><lzh:titleByProgramId pid="5"#}
 {#                                                                                 domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            {#    <lzh:normalList action="display" controller="center" offset="0"#}
-            {#                    domain="com.basesys.channel.center.CenterArticle" pid="5"#}
-            {#                    num="10"/>#}
-        </div>
-        --}%
-
-
-        <div id="adv7" class="longLay ads">
-            {#    <lzh:adv advId="e78ad55a4a5744c5014a79d06ddf0004" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
         </div>
 
-        <div id="adv8" class="longLay ads">
-            {#    <lzh:adv advId="e78ad55a55fbba1101562a674b070000" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
-        </div>
+        {#    <lzh:normalList action="display" controller="center" offset="0"#}
+        {#                    domain="com.basesys.channel.center.CenterArticle" pid="5"#}
+        {#                    num="10"/>#}
+    </div>
+    --}%
 
-        <div class="longLay">
-            <div class="divHead">
+
+    <div id="adv7" class="longLay ads">
+        {#    <lzh:adv advId="e78ad55a4a5744c5014a79d06ddf0004" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    <div id="adv8" class="longLay ads">
+        {#    <lzh:adv advId="e78ad55a55fbba1101562a674b070000" domain="com.basesys.channel.center.CenterAdvertisment"/>#}
+    </div>
+
+    <div class="longLay">
+        <div class="divHead">
         <span class="divTitle">
 {#            <g:link action="pro" id="7"><lzh:titleByProgramId pid="7"#}
 {#                                                                                  domain="com.basesys.channel.center.CenterProgram"/></g:link>#}
         </span>
-            </div>
-
-            <div class="imgList pic-scale pic-news">
-                {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="7" showTitle="true" num="6"#}
-                {#                               showContent="false" offset="0"#}
-                {#                               controller="center" action="display"/>#}
-            </div>
-
         </div>
+
+        <div class="imgList pic-scale pic-news">
+            {#            <lzh:pureImageList domain="com.basesys.channel.center.CenterArticle" pid="7" showTitle="true" num="6"#}
+            {#                               showContent="false" offset="0"#}
+            {#                               controller="center" action="display"/>#}
+        </div>
+
     </div>
 {% endblock %}

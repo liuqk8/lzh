@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c84398a9-56dd-4cea-bf1d-0b384c20b51b" name="Default Changelist" comment="" />
+    <list default="true" id="c84398a9-56dd-4cea-bf1d-0b384c20b51b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lzhcn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lzhcn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webResources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lzhcn/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lzhcn/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lzhcn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lzhcn/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/center/index/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/center/index/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lzh/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lzh/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,29 +28,33 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Q4llIDH862GIJb2I4UCKjSYfAr" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/uploads/advPic/2018/5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/uploads/advPic/2016/7" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\python projects\lzhcn\uploads\advPic\2018\5" />
-      <recent name="D:\python projects\lzhcn\static\images" />
-      <recent name="D:\python projects\lzhcn\static\lzh\js\center" />
-      <recent name="D:\python projects\lzhcn\static\lzh\images" />
-      <recent name="D:\python projects\lzhcn\static\lzh\images\center" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\python projects\lzhcn\static\js" />
       <recent name="D:\python projects\lzhcn\static" />
       <recent name="D:\python projects\lzhcn\static\media\peixun" />
       <recent name="D:\python projects\lzhcn\static\js\peixun" />
       <recent name="D:\python projects\lzhcn\static\images\peixun" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git-repo\uploads\advPic\2016\7" />
+      <recent name="D:\python projects\lzhcn\uploads\advPic\2018\5" />
+      <recent name="D:\python projects\lzhcn\static\images" />
+      <recent name="D:\python projects\lzhcn\static\lzh\js\center" />
+      <recent name="D:\python projects\lzhcn\static\lzh\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -107,11 +120,35 @@
       <workItem from="1567574032713" duration="1278000" />
       <workItem from="1567667801478" duration="7640000" />
       <workItem from="1567676895558" duration="13000" />
+      <workItem from="1567736637717" duration="2423000" />
     </task>
+    <task id="LOCAL-00001" summary="2019-9-6">
+      <created>1567738005829</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567738005829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2019-9-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019-9-6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
