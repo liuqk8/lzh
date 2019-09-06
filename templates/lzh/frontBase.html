@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load i18n %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans 'lianzheng zhongguo' %}-{% block title %}
+    {% endblock %}</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/center/main.css' %}">
+
+{% block extra_css %}
+
+{% endblock %}
+{% block extra_js %}
+
+{% endblock %}
+    <script src="{% static 'js/vue.js' %}"></script>
+</head>
+<body>
+<div id="container">
+<div id="adv1" class="ads">
+        </div>
+
+<div id="mainbody">
+{% block head %}
+    {% include 'lzh/head.html' %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block foot %}
+{% include 'lzh/foot.html' %}
+{% endblock %}
+</div>
+<div id="goTop">
+			<a href="#container">
+{#                <img src="${resource(dir:'images',file:'replay_top.jpg')}"/>#}
+            </a>
+		</div>
+</div>
+</body>
+</html>

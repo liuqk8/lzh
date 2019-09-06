@@ -1,0 +1,112 @@
+{% extends 'lzh/frontBase.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+    {% trans 'detail page' %}-{{ article.title }}
+{% endblock %}
+{% block extra_js %}
+    <script src="{% static 'js/vue.js' %}"></script>
+{% endblock %}
+<script>
+    function setFont(str) {
+        var tog = document.getElementById("artContent");
+        tog.css("font-size", str + 'px');
+    }
+</script>
+{% block content %}
+    <div id="app">
+        <div class="displayTitle">{{ article.title }}</div>
+        {% if article.leader %}
+            <div class="displayLeader">{{ article.leader }}</div>
+        {% endif %}
+
+        <div id="article_head">
+            <p> 字体大小：<a onclick="setFont(16)">小</a>
+                <a onclick="setFont(20)">中</a> <a onclick="setFont(28)">大</a>
+                {% if article.author %}
+                    作者：{{ article.author }}
+                {% endif %}
+                &nbsp;&nbsp;{% if article.source %}
+                    文章来源：{{ article.source }}
+                {% endif %}
+                {{ article.dateIssued|date:'y-m-d' }}</p>
+        </div>
+
+
+        <div class="bshare-custom">
+            <a title="分享到QQ空间" class="bshare-qzone"></a>
+            <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+            <a title="分享到人人网" class="bshare-renren"></a>
+            <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+            <a title="分享到网易微博" class="bshare-neteasemb"></a>
+            <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div id="artContent">
+            {% if article.videolink %}
+                <p style="text-align: center">
+                    {% ifequal article.videolink|slice:":4" 'http' %}
+                        <video controls="controls" autoplay="autoplay" poster="{{ article.facadePicUrl }}">
+                            {% ifequal  article.videolink|slice:'-4:' '.ogg' %}
+                                <source src="{{ article.videolink }}" type="video/ogg"/>
+                            {% endifequal %}
+
+                            {% ifequal  article.videolink|slice:'-4:' '.mp4' %}
+                                <source src="{{ article.videolink }}" type="video/mp4"/>
+                            {% endifequal %}
+                            {% ifequal  article.videolink|slice:'-5:' '.WebM' %}
+                                <source src="{{ article.videolink }}" type="video/WebM"/>
+                            {% endifequal %}
+
+                            你的浏览器不支持html5技术
+                        </video>
+                    {% else %}
+                        <a href="{{ article.videolink }}" target="_blank">
+                            <img src="{{ article.facadePicUrl }}"/>
+                        </a>
+                    {% endifequal %}
+                </p>
+            {% endif %}
+            {% if article.temp_content %}
+                {{ article.temp_content }}
+            {% else %}
+                {% include '{{ article.filelink }}' %}
+            {% endif %}
+            {% if article.program.id == 7 %}
+
+
+            {% endif %}
+            {% ifequal article.program.id 7 %}
+                <if test="${article.program.id == 7.toLong()}">
+                    <if test="${beforeOne}">
+                        <link action="display" id="${beforeOne?.id}" class="prev"></link>
+                    </if>
+                    <if test="${nextOne}">
+                        <link action="display" id="${nextOne?.id}" class="next"></link>
+                    </if>
+                </if>
+            {% endifequal %}
+            <if test="${article.quickResponseCode}">
+                <p style="text-align: center">
+                    <img src="${resource(uri:'/')}/uploads/center/common_images/zlb-icon.jpg"
+                         style="height:300px;border: 1px solid #c00000">
+                </p>
+
+            </if>
+        </div>
+
+
+        {% if article.dataEntryStaffer %}文章录入：{{ article.dataEntryStaffer }}{% endif %}
+        <div class="bshare-custom">
+            <script src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"
+                    type="text/javascript" charset="utf-8">
+            </script>
+            <script src="http://static.bshare.cn/b/bshareC0.js" type="text/javascript" charset="utf-8"></script>
+        </div>
+    </div>
+
+{% endblock %}
+
